@@ -1,0 +1,45 @@
+#1
+word = input("please enter a word: ")
+for a in word:
+  if a != "a" and a!="i" and a!="o" and a!="u" and a!="e":
+    print (a)
+    
+#2
+print("please enter your numbers and -1 to stop")
+i=0
+num_list=[]
+while i!=-1:
+  i=int(input())
+  if i!=-1:
+    num_list.append(i)
+    print (num_list)
+
+if i==-1:
+  print("print time!")
+  for a in num_list:
+    if a>10:
+      print (a)
+      
+#3
+print("please enter your numbers and -1 to stop")
+i=0
+num_list=[]
+while i!=-1:
+  i=int(input())
+  if i!=-1:
+    num_list.append(i)
+    print (num_list)
+
+max=0
+if i==-1:
+  print("print time!")
+  for a in num_list:
+    if a>max and a>0:
+      max=a
+
+print (f"max value is {max}")
+
+#4
+name=input("please enter your name: ")
+for a in range(len(name)):
+  print(name[a])

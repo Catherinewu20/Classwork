@@ -1,0 +1,112 @@
+#35
+years=int(input("Please enter the number of human years: "))
+if years <= 0:
+  print("please enter a number")
+elif years == 1:
+  print("10.5 dog years")
+elif years == 2:
+  print("21 dog years")
+else:
+  dog_years=((years-2)*7)+21
+  print (f"{dog_years} dog years")
+  
+#36
+letter = input("Please enter a letter: ")
+if len(letter) > 1:
+  print ("error: please enter a letter")
+if len(letter) == 1:
+  if letter == "a":
+    print ("vowel")
+  elif letter == "e":
+    print ("vowel")
+  elif letter == "i":
+    print ("vowel")
+  elif letter == "o":
+    print ("vowel")
+  elif letter == "u":
+    print ("vowel")
+  elif letter == "y":
+    print ("sometimes a vowel, sometimes a consonant")
+  else:
+    print ("consonant")
+    
+#37
+sides = int(input("please enter the number of sides: "))
+if sides <= 2:
+  print ("please enter a number greater than 2")
+elif sides == 3:
+  print ("triangle")
+elif sides == 4:
+  print ("rectangle")
+elif sides == 5:
+  print ("pentagon")
+elif sides == 6:
+  print ("hexagon")
+elif sides == 7:
+  print ("heptagon")
+elif sides == 8:
+  print ("octagon")
+elif sides == 9:
+  print ("nonagon")
+elif sides == 10:
+  print ("decagon")
+else:
+  print ("please enter a number smaller than 10")
+  
+#38
+month = input("please enter the name of the month: ")
+if month == "january":
+  print("31")
+elif month == "february":
+  print("28 or 29")
+elif month == "march":
+  print("31")
+elif month == "april":
+  print("30")
+elif month == "may":
+  print("31")
+elif month == "june":
+  print("30")
+elif month == "july":
+  print("31")
+elif month == "august":
+  print("31")
+elif month == "september":
+  print("30")
+elif month == "october":
+  print("31")
+elif month == "november":
+  print("30")
+elif month == "december":
+  print("31")
+else:
+  print("please enter a valid month in lowercase")
+  
+$48
+year=int(input("Please enter the year: "))
+if year <0:
+  print("please enter a year greater than 0")
+elif year%12==0:
+  print("Monkey")
+elif year%12==11:
+  print("Sheep")
+elif year%12==10:
+  print("Horse")
+elif year%12==9:
+  print("Snake")
+elif year%12==8:
+  print("Dragon")
+elif year%12==7:
+  print("Hare")
+elif year%12==6:
+  print("Tiger")
+elif year%12==5:
+  print("Ox")
+elif year%12==4:
+  print("Rat")
+elif year%12==3:
+  print("Pig")
+elif year%12==2:
+  print("Dog")
+elif year%12==1:
+  print("Rooster")

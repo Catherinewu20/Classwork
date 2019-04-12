@@ -1,0 +1,35 @@
+#104
+num_list=[]
+a=1
+print("please enter your numbers and enter 0 to stop")
+while a!=0:
+    a=int(input())
+    num_list.append(a)
+    if a==0:
+        break
+
+    print(num_list)
+
+num_list.remove(a)
+num_list.sort()
+for a in num_list:
+    print(a)
+    
+#105
+num_list=[]
+a=1
+print("please enter your numbers and enter 0 to stop")
+while a!=0:
+    a=int(input())
+    num_list.append(a)
+    if a==0:
+        break
+
+    print(num_list)
+
+num_list.remove(a)
+num_list.sort(reverse=True)
+for a in num_list:
+    print(a)
+
+#106

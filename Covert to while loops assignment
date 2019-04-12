@@ -1,0 +1,73 @@
+#1
+a=0
+my_str=input("please enter a string here: ")
+while a < len(my_str):
+    letter=my_str[a]
+    print(letter)
+    a+=1
+    
+#2
+num_list=[]
+a=0
+print("please enter your numbers and enter -1 to stop")
+while a!=-1:
+    a=int(input())
+    num_list.append(a)
+    if a==-1:
+        break
+    elif a<0:
+        print ("no negatives please")
+        num_list.remove(a)
+    print(num_list)
+
+num_list.remove(a)
+print ("")
+b=0
+while b<len(num_list):
+    num=num_list[b]
+    print(num)
+    b+=1
+    
+#3
+mark_list=[]
+a=0
+print("please enter your marks and enter -1 to stop")
+while a!=-1:
+    a=int(input())
+    mark_list.append(a)
+    if a==-1:
+        break
+    elif a<0:
+        print ("no negatives please")
+        mark_list.remove(a)
+    elif a>100:
+        print ("please enter a valid mark")
+        mark_list.remove(a)
+    print(mark_list)
+
+mark_list.remove(a)
+print ("")
+
+b=0
+while b<len(mark_list):
+    num=mark_list[b]
+    print(num)
+    b+=1
+    
+#4
+a=0
+while a<10:
+    print(a)
+    a+=1
+    
+#5
+a=5
+while a<100:
+    print(a)
+    a+=5
+    
+#6
+a=100
+while a>-1:
+    print(a)
+    a+=-2

@@ -1,0 +1,186 @@
+"""
+# Markbook Program
+- Enter/remove/change student names
+- Enter/change student marks, one mark per student, or more if you want.
+- Calculate class average
+- Get list of at-risk students mark <= 65
+- Get top student/mark
+- Print a report of whole class (names and marks)
+"""
+
+name_list=[]
+name=""
+print("")
+print("Welcome to markbook!")
+print("")
+print("Please enter your student names. Enter 0 to stop.")
+while name != "0":
+  name=input("Enter here: ")
+  name_list.append(name)
+  if name=="0":
+    break
+  print (name_list)
+
+name_list.remove(name)
+print ("")
+print (f"Your class list: {name_list}")
+print ("")
+
+mark_list=[]
+mark=0
+a=0
+for a in range(len(name_list)):
+  mark=int(input(f"Enter marks for {name_list[a]}: "))
+  mark_list.append(mark)
+  # Fix if statements ^
+  print(f"{name_list[a]} = {mark_list[a]}")
+
+o=0
+while o==0:
+  print("")
+  print("Markbook")
+  print("1 - Edit student names")
+  print("2 - Edit student marks")
+  print("3 - Calculate class average")
+  print("4 - See at-risk students")
+  print("5 - See top student")
+  print("6 - Print class report")
+  choice = int(input("Menu choice: "))
+  if choice == 1:
+    o=1
+    print("")
+    print("Edit student names")
+    print("1 - Enter new student")
+    print("2 - Remove student")
+    print("3 - Change student name")
+    choice1 = int(input("Menu choice: "))
+    if choice1 == 1:
+      print("Enter student names below. Enter 0 when finished")
+      new=""
+      new_list=[]
+      while new != "0":
+        new=input()
+        name_list.append(new)
+        new_list.append(new)
+        if new=="0":
+          name_list.remove(new)
+          new_list.remove(new)
+          break
+        print(name_list)
+      for b in range(len(new_list)):
+        new_mark=int(input(f"Enter marks for {new_list[b]}: "))
+        mark_list.append(new_mark)
+        if new_mark<0:
+          print("please enter a valid mark")
+          mark_list.remove(mark)
+        elif mark>100:
+          print("please enter a valid mark")
+          mark_list.remove(mark)
+        print(f"{new_list[b]} = {mark_list[-1]}")
+      print("")
+      print("Updated class list:")
+      print(name_list)
+      print(mark_list)
+      o = 0
+
+    elif choice1 == 2:
+      print("Enter student name you want to remove. Enter 0 when finished")
+      print(name_list)
+      c=1
+      rem=""
+      while rem != "0":
+        rem=input()
+        for g in name_list:
+          #Update for marks^
+          if rem == g:
+            f=name_list.index(g)
+            name_list.remove(rem)
+            mark_list.remove(mark_list[f])
+            print(name_list)
+      if rem == "0":
+        print("Updated class list:")
+        print(name_list)
+        print(mark_list)
+        o=0
+    
+    elif choice1 == 3:
+      print("Enter student's name you want to change. Enter 0 when finished")
+      print(name_list)
+      p=0
+      change=""
+      while p==0:
+        print("Enter students:")
+        change=input()
+        for k in name_list:
+          if change==k:
+            change_name=input("Please enter new name: ")
+            h=name_list.index(change)
+            name_list[h]=change_name
+            print(name_list)
+          if change == "0":
+            p=1
+            o=0
+
+  elif choice==2:
+    o=1
+    print("")
+    print("Edit student marks")
+    print("Please enter the student's name whose mark you would like to edit and enter 0 when you're done")
+    print(name_list)
+    mark_change=""
+    new_new_mark=2
+    while mark_change!="0":
+      mark_change=input("Enter student here: ")
+      for n in name_list:
+        if mark_change==n:
+          m=name_list.index(n)
+          print(f"Old mark = {mark_list[m]}")
+          new_new_mark=int(input("Enter new mark here: "))
+          # Add + fix negative/>100 if statements
+          mark_list[m]=new_new_mark
+          print("New mark list:")
+          print(mark_list)
+      if mark_change=="0":
+        o=0
+
+  elif choice==3:
+    o=1
+    print("")
+    print("Class average:")
+    u=0
+    for y in mark_list:
+      u+=y
+    print(f"{u/len(mark_list)}%")
+    o=0
+
+  elif choice==4:
+    o=1
+    l=1
+    print("")
+    print("At-risk students:")
+    for w in mark_list:
+      if w<=65:
+        l=0
+        print(f"{name_list[mark_list.index(w)]}({w}%)")
+    if l==1:
+      print("No at-risk students")
+    o=0
+
+  elif choice==5:
+    o=1
+    print("")
+    print("Top student:")
+    max=0
+    for t in mark_list:
+      if t>max:
+        max=t
+    print(f"{name_list[mark_list.index(max)]}({max}%)")
+    o=0
+
+  elif choice==6:
+    o=1
+    print("")
+    print("Class report:")
+    for v in mark_list:
+      print(f"{name_list[mark_list.index(v)]} - {v}%")
+    o=0

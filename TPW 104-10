@@ -33,3 +33,28 @@ for a in num_list:
     print(a)
 
 #106
+print("Please enter your numbers. Press -1 to stop")
+num=0
+num_list=[]
+a=0
+while a==0:
+  num=int(input())
+  if num>=0:
+    num_list.append(num)
+    print(num_list)
+  elif num==-1:
+    if len(num_list)>=4:
+      a=1
+    if len(num_list)<4:
+      print("Error: please enter more than 4 numbers")
+  elif num<-1:
+    print("please enter a positive number")
+    print(num_list)
+
+print("")
+print(f"Original list:{num_list}")
+num_list2=num_list
+num_list2.sort()
+num_list2.remove(num_list[0])
+num_list2.remove(num_list[-1])
+print(f"New list:{num_list2}")
